@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Blog.app">
+    <meta name="author" content="Nicolas">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Custom styles for this template, including localy hosted Google fonts -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename='favicon.ico') }}" rel="shortcut icon">
+</head>
+
+<body>
+
+<nav>
+  <a href="/"><span></span>HOMEPAGE</a>
+</nav>
+
+<main role="main" class="container">
+
+  <header>
+    <div>
+      <div>
+        <a href="/post/add" class="saying">Say something</a>
+      </div>
+      <div>
+        <h1 class="thought">Thoughts and Anecdotes</h1>
+      </div>
+      <div>
+
+      </div>
+    </div>
+  </header>
+
+{% block content %}{% endblock %}
+
+</main><!-- /.container -->
+
+<footer class="blog-footer">
+  <p>Made completely and 100% by Niclas with no help from anyone whatsoever</p>
+  <p>
+    <a href="#">Back to top</a>
+  </p>
+</footer>
+
+</body>
+</html>

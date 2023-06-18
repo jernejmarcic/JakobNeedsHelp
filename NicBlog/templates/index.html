@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Blog.app &middot; Index{% endblock %}
+
+{% block content %}
+	{% if data %}
+		{% for item in data %}
+			{% if loop.first %}
+			<div>
+				<div>
+					<h1>{{ item.title }}</h1>
+					<p>Last change {{ item.updated.strftime('%d. %m. %Y') }}</p>
+					<div>
+					{% for line in item.summary.split('\n') %}
+						<p>{{ line }}</p>
+					{% endfor %}
+					</div>
+					<p><a href="/post/view/{{ item.id }}">Continue reading ...</a></p>
+					<p>
+						<a href="/post/edit/{{ item.id }}">Edit</a>
+						<a href="/post/delete/{{ item.id }}">Delete</a>
+					</p>
+				</div>
+			</div>
+			{% else %}
+			<div class="blog-post">
+				<h2 class="blog-post-title">{{ item.title }}</h2>
+				<p class="blog-post-meta">Last change {{ item.updated.strftime('%d. %m. %Y') }}</p>
+				<div>
+				{% for line in item.summary.split('\n') %}
+					<p>{{ line }}</p>
+				{% endfor %}
+				</div>
+				<p><a href="/post/view/{{ item.id }}">Continue reading ...</a></p>
+				<p>
+					<a href="/post/edit/{{ item.id }}">Edit</a>
+					<a href="/post/delete/{{ item.id }}">Delete</a>
+				</p>
+			</div>
+			{% endif %}
+		{% endfor %}
+	{% else %}
+		 <a href="/post/add"></a>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Daytona';
+    src: url('Daytona.eot');
+    src: local('Daytona'),
+        url('Daytona.eot?#iefix') format('embedded-opentype'),
+        url('Daytona.woff2') format('woff2'),
+        url('Daytona.woff') format('woff'),
+        url('Daytona.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Daytona Condensed';
+    src: url('DaytonaCondensed-Italic.eot');
+    src: local('Daytona Condensed Italic'), local('DaytonaCondensed-Italic'),
+        url('DaytonaCondensed-Italic.eot?#iefix') format('embedded-opentype'),
+        url('DaytonaCondensed-Italic.woff2') format('woff2'),
+        url('DaytonaCondensed-Italic.woff') format('woff'),
+        url('DaytonaCondensed-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Daytona';
+    src: url('Daytona-Italic.eot');
+    src: local('Daytona Italic'), local('Daytona-Italic'),
+        url('Daytona-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Daytona-Italic.woff2') format('woff2'),
+        url('Daytona-Italic.woff') format('woff'),
+        url('Daytona-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
